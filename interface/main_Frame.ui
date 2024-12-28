@@ -1714,20 +1714,20 @@ background-color: #fefefe;</string>
      <string>Menu</string>
     </property>
     <addaction name="separator"/>
-    <addaction name="actionNew_Menu_2"/>
+    <addaction name="newMenu"/>
     <addaction name="separator"/>
-    <addaction name="actionMenu_History"/>
+    <addaction name="history"/>
     <addaction name="separator"/>
-    <addaction name="actionPurchasee_order"/>
+    <addaction name="purcharseOrder"/>
    </widget>
    <widget class="QMenu" name="menuDish">
     <property name="title">
      <string>Dish</string>
     </property>
     <addaction name="separator"/>
-    <addaction name="actionAdd_New_Dish"/>
+    <addaction name="newDish"/>
     <addaction name="separator"/>
-    <addaction name="actionUpdate_Dish"/>
+    <addaction name="updateDish"/>
     <addaction name="separator"/>
    </widget>
    <widget class="QMenu" name="menuUser">
@@ -1735,7 +1735,7 @@ background-color: #fefefe;</string>
      <string>User</string>
     </property>
     <addaction name="separator"/>
-    <addaction name="actionAdd_New_User"/>
+    <addaction name="newUser"/>
     <addaction name="separator"/>
     <addaction name="separator"/>
    </widget>
@@ -1753,27 +1753,27 @@ background-color: #fefefe;</string>
     <string>History</string>
    </property>
   </action>
-  <action name="actionNew_Menu_2">
+  <action name="newMenu">
    <property name="text">
     <string>New Menu</string>
    </property>
   </action>
-  <action name="actionMenu_History">
+  <action name="history">
    <property name="text">
     <string>Menu History</string>
    </property>
   </action>
-  <action name="actionPurchasee_order">
+  <action name="purcharseOrder">
    <property name="text">
     <string>Purchase Orders</string>
    </property>
   </action>
-  <action name="actionAdd_New_Dish">
+  <action name="newDish">
    <property name="text">
     <string>Add New Dish</string>
    </property>
   </action>
-  <action name="actionUpdate_Dish">
+  <action name="updateDish">
    <property name="text">
     <string>Update Dish</string>
    </property>
@@ -1783,7 +1783,7 @@ background-color: #fefefe;</string>
     <string>Delete Dish</string>
    </property>
   </action>
-  <action name="actionAdd_New_User">
+  <action name="newUser">
    <property name="text">
     <string>Manage Users</string>
    </property>
