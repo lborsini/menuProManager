@@ -1,0 +1,1804 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1111</width>
+    <height>887</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Menu Manager Pro</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../Menu ManagerPro/menu.ico</normaloff>../Menu ManagerPro/menu.ico</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.950000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* Estilo para los frames */
+QFrame {
+    background-color: #fefefe; /* color blanco viejo */
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+/* Estilo para el label principal */
+QLabel#titulo {
+    background-color: transparent;
+    color: black;
+    font-size: 48px;
+    font-weight: bold;
+    font: 75 48pt &quot;Segoe Script&quot;;
+}
+
+/* Estilo para los labels de usuario y contraseña */
+QLabel {
+    background-color: transparent;
+    color: #003366; /* azul oscuro */
+    font-size: 20px;
+    font: 75 16pt &quot;Segoe Script&quot;;
+}
+
+/* Estilo para los campos de entrada (QLineEdit) */
+QLineEdit {
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border-bottom: 2px solid #003366; /* borde azul al seleccionar */
+}
+
+/* Estilo para el botón de submit */
+QPushButton {
+    background-color: #003366; /* azul oscuro */
+    color: white;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+}
+
+QPushButton:hover {
+    background-color: #005b99; /* color más claro al pasar el ratón */
+    font-size: 15px; /* agranda un poco las letras */
+}
+
+/* Estilo para el label de autor */
+QLabel#autor {
+    color: rgb(24, 24, 24);
+    font: 87 8pt &quot;Segoe UI Black&quot;;
+}
+
+/* Estilo para QGroupBox */
+QGroupBox {
+    background-color: transparent;
+    border: 2px solid #2a2a2a; /* grafito */
+    border-radius: 5px;
+    padding: 10px;
+    font: 75 12pt &quot;Segoe Script&quot;;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 5px;
+    color:  #2a2a2a;
+    font: bold 14pt &quot;Segoe Script&quot;;
+}
+
+/* Estilo para los ComboBoxes */
+QComboBox {
+    border: 2px solid #2a2a2a; /* grafito */
+    border-radius: 5px;
+    padding: 5px;
+    background-color: transparent;
+    color: white;
+    font: 75 14pt &quot;Segoe Script&quot;;
+}
+
+QComboBox::drop-down {
+    border-left: 1px solid #2a2a2a;
+    background-color: #003366; /* azul oscuro */
+    color: white;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #2a2a2a;
+    background-color: #fefefe;
+    color: #003366; /* azul oscuro */
+}
+
+/* Estilo para CheckBoxes */
+QCheckBox {
+    color:  #2a2a2a;
+    font: 75 12pt &quot;Segoe Script&quot;;
+}
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #2a2a2a;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #003366; /* azul oscuro */
+}
+
+/* Estilo para DateWidget */
+QDateEdit, QDateTimeEdit {
+    border: 2px solid #2a2a2a; /* grafito */
+    border-radius: 5px;
+    padding: 5px;
+    background-color: transparent;
+    color:  #2a2a2a;
+    font: 75 12pt &quot;Segoe Script&quot;;
+}
+
+/* Estilo para el menú */
+QMenuBar {
+    background-color: #2a2a2a; /* grafito */
+    color: white;
+    border: none;
+}
+
+QMenuBar::item {
+    padding: 10px;
+    background-color: transparent;
+}
+
+QMenuBar::item:selected {
+    background-color: #003366; /* azul oscuro */
+    color: white;
+}
+
+QMenu {
+    background-color: #2a2a2a; /* grafito */
+    color: white;
+    border: 1px solid #2a2a2a;
+}
+
+QMenu::item {
+    padding: 10px;
+    background-color: transparent;
+}
+
+QMenu::item:selected {
+    background-color: #003366; /* azul oscuro */
+    color: white;
+}
+
+/* Estilo para separadores en el menú */
+QMenu::separator {
+    height: 1px;
+    background-color: black;
+}
+
+/* Estilo para QListView */
+QListView {
+    border: 2px solid #2a2a2a; /* grafito */
+    background-color: transparent;
+    color: #003366; /* azul oscuro */
+    font: 75 14pt &quot;Segoe Script&quot;;
+}
+
+QListView::item {
+    border-bottom: 1px solid #2a2a2a; /* grafito */
+    padding: 5px;
+}
+
+QListView::item:selected {
+    background-color: #003366; /* azul oscuro */
+    color: white;
+}
+
+/* Estilo para los detalles de los items en QListView */
+QListView::item:hover {
+    background-color: #005b99; /* color más claro al pasar el ratón */
+    color: white;
+}
+
+QListView::item:selected:hover {
+    background-color: #005b99; /* color más claro al pasar el ratón */
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1111</width>
+      <height>851</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>1111</width>
+      <height>851</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>1111</width>
+      <height>851</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="pag_create_menu">
+     <widget class="QFrame" name="frame_createMenu_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>0</y>
+        <width>1091</width>
+        <height>811</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QGroupBox" name="groupBox_6">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>511</width>
+         <height>231</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Daily Special</string>
+       </property>
+       <widget class="QLabel" name="label_13">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_14">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>69</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Items</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cmb_main_special_2">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>30</y>
+          <width>391</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="lst_main_special_2">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>70</y>
+          <width>391</width>
+          <height>151</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="btn_main_submit_2">
+       <property name="geometry">
+        <rect>
+         <x>970</x>
+         <y>760</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_7">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>90</y>
+         <width>511</width>
+         <height>231</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Grab and Go</string>
+       </property>
+       <widget class="QLabel" name="label_15">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_16">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>69</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Items</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cmb_main_vegan_2">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>30</y>
+          <width>391</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="lst_main_vegan_2">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>70</y>
+          <width>391</width>
+          <height>151</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_8">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>330</y>
+         <width>511</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Ready to Go</string>
+       </property>
+       <widget class="QLabel" name="label_17">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_18">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>69</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Items</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cmb_special_vegetarian_2">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>30</y>
+          <width>391</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="lst_main_vegetarian_2">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>70</y>
+          <width>391</width>
+          <height>151</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cmb_main_meat_2">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>260</y>
+          <width>391</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_19">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>298</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Items</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="lst_main_meat_2">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>300</y>
+          <width>391</width>
+          <height>151</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_20">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>260</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_9">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>330</y>
+         <width>511</width>
+         <height>231</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Spa Water</string>
+       </property>
+       <widget class="QLabel" name="label_21">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_22">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>69</y>
+          <width>81</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Items</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cmb_main_water_2">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>30</y>
+          <width>391</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="lst_main_water_2">
+        <property name="geometry">
+         <rect>
+          <x>100</x>
+          <y>70</y>
+          <width>391</width>
+          <height>151</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>871</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Estilo para el label principal */
+QLabel {
+    background-color: transparent;
+    
+	color: rgb(0, 0, 0);
+    font-size: 48px;
+    font-weight: bold;
+    font: 75 48pt &quot;Segoe Script&quot;;
+}</string>
+       </property>
+       <property name="text">
+        <string>Create Menu</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_main_preView_2">
+       <property name="geometry">
+        <rect>
+         <x>830</x>
+         <y>760</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Pre View</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_10">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>570</y>
+         <width>511</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Toppins</string>
+       </property>
+       <widget class="QCheckBox" name="checkBox_5">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>50</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cruttons</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_6">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>90</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Chilli Flakes</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_7">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>50</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Pumpkin Seeds</string>
+        </property>
+       </widget>
+       <widget class="QCheckBox" name="checkBox_8">
+        <property name="geometry">
+         <rect>
+          <x>270</x>
+          <y>90</y>
+          <width>191</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Fried Shallots</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QDateEdit" name="dateEdit">
+       <property name="geometry">
+        <rect>
+         <x>900</x>
+         <y>20</y>
+         <width>171</width>
+         <height>51</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_23">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>820</y>
+        <width>1101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(24, 24, 24);
+font: 87 8pt &quot;Segoe UI Black&quot;;
+border: none;
+background-color: #fefefe;</string>
+      </property>
+      <property name="text">
+       <string>© Leandro Borsini</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pag_dish_createNewDish">
+     <widget class="QFrame" name="frame_createMenu_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>1091</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QGroupBox" name="groupBox_11">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>511</width>
+         <height>701</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Add Dish</string>
+       </property>
+       <widget class="QLabel" name="label_26">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_30">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Section</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="entry_user_login">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>70</y>
+          <width>361</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QListWidget" name="lst_main_vegan_4">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>200</y>
+          <width>481</width>
+          <height>431</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="entry_newDish_name">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>30</y>
+          <width>361</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_main_submit_4">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>650</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add Item</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="entry_user_login_3">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>110</y>
+          <width>361</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_31">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Items</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_33">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>150</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Qty</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="entry_user_login_4">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>150</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="btn_main_submit_3">
+       <property name="geometry">
+        <rect>
+         <x>960</x>
+         <y>740</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_12">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>90</y>
+         <width>511</width>
+         <height>641</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>SMILE  😁</string>
+       </property>
+       <widget class="QLabel" name="label_27">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>50</y>
+          <width>491</width>
+          <height>581</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../Menu ManagerPro/menu.ico</pixmap>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_36">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>1031</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Estilo para el label principal */
+QLabel {
+    background-color: transparent;
+    
+	color: rgb(0, 0, 0);
+    font-size: 48px;
+    font-weight: bold;
+    font: 75 48pt &quot;Segoe Script&quot;;
+}</string>
+       </property>
+       <property name="text">
+        <string>New Dish</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_main_preView_3">
+       <property name="geometry">
+        <rect>
+         <x>820</x>
+         <y>740</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>820</y>
+        <width>1101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(24, 24, 24);
+font: 87 8pt &quot;Segoe UI Black&quot;;
+border: none;
+</string>
+      </property>
+      <property name="text">
+       <string>© Leandro Borsini</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pag_update_dish">
+     <widget class="QLabel" name="label_24">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>820</y>
+        <width>1101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(24, 24, 24);
+font: 87 8pt &quot;Segoe UI Black&quot;;
+border: none;
+background-color: #fefefe;</string>
+      </property>
+      <property name="text">
+       <string>© Leandro Borsini</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_createMenu_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>1091</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QGroupBox" name="groupBox_13">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>511</width>
+         <height>701</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Original Dish</string>
+       </property>
+       <widget class="QListWidget" name="lst_main_vegan_5">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>110</y>
+          <width>481</width>
+          <height>521</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cmb_main_special_6">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>70</y>
+          <width>371</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_38">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>30</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Section</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cmb_main_special_7">
+        <property name="geometry">
+         <rect>
+          <x>120</x>
+          <y>30</y>
+          <width>371</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_29">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>70</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_main_preView_7">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>650</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Update</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_main_preView_6">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>650</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_main_preView_8">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>650</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="btn_main_submit_6">
+       <property name="geometry">
+        <rect>
+         <x>960</x>
+         <y>740</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_37">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>1031</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Estilo para el label principal */
+QLabel {
+    background-color: transparent;
+    
+	color: rgb(0, 0, 0);
+    font-size: 48px;
+    font-weight: bold;
+    font: 75 48pt &quot;Segoe Script&quot;;
+}</string>
+       </property>
+       <property name="text">
+        <string>Update Dish</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_14">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>90</y>
+         <width>511</width>
+         <height>641</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Updating Dish</string>
+       </property>
+       <widget class="QListWidget" name="lst_main_vegan_6">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>200</y>
+          <width>481</width>
+          <height>431</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cmb_main_special_4">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>70</y>
+          <width>371</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_32">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Section</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cmb_main_special_3">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>30</y>
+          <width>371</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_28">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="entry_user_login_5">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>150</y>
+          <width>141</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_34">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Items</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_35">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>150</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Qty</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cmb_main_special_5">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>110</y>
+          <width>371</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="pag_manageUser">
+     <widget class="QFrame" name="frame_createMenu_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>1091</width>
+        <height>801</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QGroupBox" name="groupBox_15">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>90</y>
+         <width>511</width>
+         <height>701</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Users</string>
+       </property>
+       <widget class="QListWidget" name="lst_main_vegan_7">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>100</y>
+          <width>481</width>
+          <height>531</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_main_preView_9">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>650</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Update</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_main_preView_10">
+        <property name="geometry">
+         <rect>
+          <x>370</x>
+          <y>650</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Delete</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="btn_main_preView_11">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>650</y>
+          <width>111</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Add</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_47">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>40</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Name</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="entry_user_login_7">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>40</y>
+          <width>351</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="btn_main_submit_7">
+       <property name="geometry">
+        <rect>
+         <x>960</x>
+         <y>740</y>
+         <width>111</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Submit</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_41">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>10</y>
+         <width>1031</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* Estilo para el label principal */
+QLabel {
+    background-color: transparent;
+    
+	color: rgb(0, 0, 0);
+    font-size: 48px;
+    font-weight: bold;
+    font: 75 48pt &quot;Segoe Script&quot;;
+}</string>
+       </property>
+       <property name="text">
+        <string>Manage User</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QGroupBox" name="groupBox_16">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>90</y>
+         <width>511</width>
+         <height>211</height>
+        </rect>
+       </property>
+       <property name="title">
+        <string>Updating Dish</string>
+       </property>
+       <widget class="QLabel" name="label_43">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>70</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>User</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_44">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>110</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Password</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_45">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>150</y>
+          <width>131</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Type</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QComboBox" name="cmb_main_special_12">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>150</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="entry_user_login_8">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>70</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="entry_user_login_9">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>110</y>
+          <width>301</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Normal</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="lbl_image_users">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>320</y>
+         <width>511</width>
+         <height>411</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>../Menu ManagerPro/menu.ico</pixmap>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="label_46">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>820</y>
+        <width>1101</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(24, 24, 24);
+font: 87 8pt &quot;Segoe UI Black&quot;;
+border: none;
+background-color: #fefefe;</string>
+      </property>
+      <property name="text">
+       <string>© Leandro Borsini</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1111</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionNew_Menu_2"/>
+    <addaction name="separator"/>
+    <addaction name="actionMenu_History"/>
+    <addaction name="separator"/>
+    <addaction name="actionPurchasee_order"/>
+   </widget>
+   <widget class="QMenu" name="menuDish">
+    <property name="title">
+     <string>Dish</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionAdd_New_Dish"/>
+    <addaction name="separator"/>
+    <addaction name="actionUpdate_Dish"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuUser">
+    <property name="title">
+     <string>User</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionAdd_New_User"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+   </widget>
+   <addaction name="menuMenu"/>
+   <addaction name="menuDish"/>
+   <addaction name="menuUser"/>
+  </widget>
+  <action name="actionNew_Menu">
+   <property name="text">
+    <string>New Menu</string>
+   </property>
+  </action>
+  <action name="actionHistory">
+   <property name="text">
+    <string>History</string>
+   </property>
+  </action>
+  <action name="actionNew_Menu_2">
+   <property name="text">
+    <string>New Menu</string>
+   </property>
+  </action>
+  <action name="actionMenu_History">
+   <property name="text">
+    <string>Menu History</string>
+   </property>
+  </action>
+  <action name="actionPurchasee_order">
+   <property name="text">
+    <string>Purchase Orders</string>
+   </property>
+  </action>
+  <action name="actionAdd_New_Dish">
+   <property name="text">
+    <string>Add New Dish</string>
+   </property>
+  </action>
+  <action name="actionUpdate_Dish">
+   <property name="text">
+    <string>Update Dish</string>
+   </property>
+  </action>
+  <action name="actionDelete_Dish">
+   <property name="text">
+    <string>Delete Dish</string>
+   </property>
+  </action>
+  <action name="actionAdd_New_User">
+   <property name="text">
+    <string>Manage Users</string>
+   </property>
+  </action>
+  <action name="actionUpdate_User">
+   <property name="text">
+    <string>Update User</string>
+   </property>
+  </action>
+  <action name="actionDelete_User">
+   <property name="text">
+    <string>Delete User</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
